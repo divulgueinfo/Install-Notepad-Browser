@@ -55,10 +55,14 @@ sudo a2ensite link.notepad.conf
 
 sudo service apache2 restart
 
-echo "Link simbolico"
+echo "Link simbólico"
 echo ""
 
-ln -s /opt/Notepad-Browser/Notepad-Browser/all/  ~/Files
+echo "Nome de usuário:"
+read varname
+
+
+ln -s /opt/Notepad-Browser/Notepad-Browser/all/  /home/$varname/Files
 
 echo "Fim"
 echo ""
