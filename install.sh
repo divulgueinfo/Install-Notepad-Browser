@@ -10,7 +10,8 @@ sudo apt install php
 cd /opt/
 mkdir Notepad-Browser
 cd Notepad-Browser
-sudo git clone git@github.com:davinyvidal/Notepad-Browser.git
+sudo chmod 777 -R /opt/Notepad-Browser/
+git clone git@github.com:davinyvidal/Notepad-Browser.git
 sudo chmod 777 -R /opt/Notepad-Browser/all/
 
 

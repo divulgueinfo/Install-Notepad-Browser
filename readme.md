@@ -76,7 +76,7 @@ sudo apt install git
 cd ~/
 mkdir Install-Notepad-Browser
 cd ~/Install-Notepad-Browser/
-sudo git clone git@github.com:divulgueinfo/Install-Notepad-Browser.git
+git clone git@github.com:divulgueinfo/Install-Notepad-Browser.git
 sudo sh ./install.sh
 ```
 
