@@ -17,6 +17,10 @@ sudo cp file.notepad.conf.exemplo /etc/apache2/sites-available/file.notepad.conf
 sudo cp create.notepad.conf.exemplo /etc/apache2/sites-available/create.notepad.conf
 sudo cp link.notepad.conf.exemplo /etc/apache2/sites-available/link.notepad.conf
 
+sudo rm create.notepad.conf.exemplo
+sudo rm link.notepad.conf.exemplo
+sudo rm file.notepad.conf.exemplo
+
 
 if grep -r 'Notepad-Browser' /etc/apache2/apache2.conf
   then echo "[ok]"
@@ -60,7 +64,6 @@ echo ""
 
 echo "Nome de usuário:"
 read varname
-
 
 ln -s /opt/Notepad-Browser/Notepad-Browser/all/  /home/$varname/Files
 
