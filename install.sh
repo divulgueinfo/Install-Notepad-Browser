@@ -2,10 +2,13 @@
 echo "Seu nome de usuário é:"
 whoami
 
+
 sudo mkdir /opt/Notepad-Browser
+
+mv Notepad-Browser /opt/Notepad-Browser/Notepad-Browser
+
 cd /opt/Notepad-Browser/
 sudo chmod 777 -R /opt/Notepad-Browser/
-git clone git@github.com:davinyvidal/Notepad-Browser.git
 cd Notepad-Browser
 sudo chmod 777 -R /opt/Notepad-Browser/Notepad-Browser/all/
 
