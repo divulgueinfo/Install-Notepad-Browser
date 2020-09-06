@@ -2,7 +2,17 @@
 echo "Seu nome de usuário é:"
 whoami
 
-
+echo ""
+echo "Instalador do Notepad-Browser"
+echo ""
+echo "Feito pela Daviny Vidal"
+echo "www.daviny.vidal.nom.br"
+echo ""
+echo "https://github.com/davinyvidal/Notepad-Browser"
+echo ""
+echo ""
+echo "Preparando os arquivos"
+echo ""
 sudo mkdir /opt/Notepad-Browser
 
 mv Notepad-Browser /opt/Notepad-Browser/Notepad-Browser
@@ -12,7 +22,8 @@ sudo chmod 777 -R /opt/Notepad-Browser/
 cd Notepad-Browser
 sudo chmod 777 -R /opt/Notepad-Browser/Notepad-Browser/all/
 
-
+echo "Configuração dos .conf"
+echo ""
 sudo cp file.notepad.conf.exemplo /etc/apache2/sites-available/file.notepad.conf
 sudo cp create.notepad.conf.exemplo /etc/apache2/sites-available/create.notepad.conf
 sudo cp link.notepad.conf.exemplo /etc/apache2/sites-available/link.notepad.conf
@@ -67,5 +78,11 @@ read varname
 
 ln -s /opt/Notepad-Browser/Notepad-Browser/all/  /home/$varname/Files
 
-echo "Fim"
+echo "Fim da instalação - se tudo ocorreu bem"
+echo ""
+echo "http://file.notepad"
+echo ""
+echo "Obrigada por instalar Notepad-Browser"
+echo ""
+echo "Todos os direitos reservados"
 echo ""
