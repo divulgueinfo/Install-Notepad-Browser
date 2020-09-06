@@ -22,7 +22,7 @@ if grep -r 'Notepad-Browser' /etc/apache2/apache2.conf
   then echo "[ok]"
   else
 	 echo "escrevendo no arquivo"
-	 echo "<Directory /opt/Notepad-Browser/>" >> "/etc/apache2/apache2.conf"
+	 echo "<Directory /opt/Notepad-Browser/Notepad-Browser/>" >> "/etc/apache2/apache2.conf"
 	 echo "        Options Indexes FollowSymLinks" >> "/etc/apache2/apache2.conf"
 	 echo "        AllowOverride None" >> "/etc/apache2/apache2.conf"
          echo "        Require all granted" >> "/etc/apache2/apache2.conf"
