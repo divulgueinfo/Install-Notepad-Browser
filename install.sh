@@ -8,9 +8,11 @@ sudo apt install apache2
 sudo apt install php
 
 cd /opt/
+mkdir Notepad-Browser
+cd Notepad-Browser
 sudo git clone git@github.com:davinyvidal/Notepad-Browser.git
 sudo chmod 777 -R /opt/Notepad-Browser/all/
-cd Notepad-Browser
+
 
 sudo cp file.notepad.conf.exemplo /etc/apache2/sites-available/file.notepad.conf
 sudo cp create.notepad.conf.exemplo /etc/apache2/sites-available/create.notepad.conf
