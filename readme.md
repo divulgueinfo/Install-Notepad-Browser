@@ -34,10 +34,15 @@
 ```bash
 |---  file
 |     | index.php
-|     | conf.php
 |     | functionFile.php
 |     | file.php
-|     | readme.html
+|     |---   __doc__
+|            |create.notepad.conf.exemplo
+|            |link.notepad.conf.exemplo
+|            |file.notepad.conf.exemplo
+|            |readme.html
+|            |readme.html
+|            |doc.html
 |
 |---  text
 |     | index.php
@@ -51,10 +56,6 @@
 |
 | readme.md
 | tela.png
-| readme.html
-| create.notepad.conf.exemplo
-| link.notepad.conf.exemplo
-| file.notepad.conf.exemplo
 
 ```
 

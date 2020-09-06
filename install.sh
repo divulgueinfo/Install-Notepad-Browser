@@ -3,7 +3,7 @@ echo "Seu nome de usuário é:"
 whoami
 
 echo ""
-echo "Instalador do Notepad-Browser"
+echo "Instalador do Notepad-Browser 0.1"
 echo ""
 echo "Feito pela Daviny Vidal"
 echo "www.daviny.vidal.nom.br"
@@ -24,13 +24,56 @@ sudo chmod 777 -R /opt/Notepad-Browser/Notepad-Browser/all/
 
 echo "Configuração dos .conf"
 echo ""
-sudo cp file.notepad.conf.exemplo /etc/apache2/sites-available/file.notepad.conf
-sudo cp create.notepad.conf.exemplo /etc/apache2/sites-available/create.notepad.conf
-sudo cp link.notepad.conf.exemplo /etc/apache2/sites-available/link.notepad.conf
 
-sudo rm create.notepad.conf.exemplo
-sudo rm link.notepad.conf.exemplo
-sudo rm file.notepad.conf.exemplo
+touch /etc/apache2/sites-available/file.notepad.conf
+touch /etc/apache2/sites-available/create.notepad.conf
+touch /etc/apache2/sites-available/link.notepad.conf
+
+
+
+if grep -r '<VirtualHost *:80>' /etc/apache2/sites-available/file.notepad.conf
+  then echo "[ok]"
+  else
+	 echo "escrevendo no arquivo"
+	 echo "<VirtualHost *:80>" >> "/etc/apache2/sites-available/file.notepad.conf"
+	 echo "    ServerAdmin admin@example.com" >> "/etc/apache2/sites-available/file.notepad.conf"
+	 echo "    ServerName file.notepad" >> "/etc/apache2/sites-available/file.notepad.conf"
+	 echo "    ServerAlias file.notepad" >> "/etc/apache2/sites-available/file.notepad.conf"
+         echo "    DocumentRoot /opt/Notepad-Browser/Notepad-Browser/text/" >> "/etc/apache2/sites-available/file.notepad.conf"
+	 echo "    ErrorLog ${APACHE_LOG_DIR}/error.log" >> "/etc/apache2/sites-available/file.notepad.conf"
+	 echo "    CustomLog ${APACHE_LOG_DIR}/access.log combined" >> "/etc/apache2/sites-available/file.notepad.conf"
+	 echo "</VirtualHost>" >> "/etc/apache2/sites-available/file.notepad.conf"
+fi
+
+
+if grep -r '<VirtualHost *:80>' /etc/apache2/sites-available/create.notepad.conf
+  then echo "[ok]"
+  else
+	 echo "escrevendo no arquivo"
+	 echo "<VirtualHost *:80>" >> "/etc/apache2/sites-available/create.notepad.conf"
+	 echo "    ServerAdmin admin@example.com" >> "/etc/apache2/sites-available/create.notepad.conf"
+	 echo "    ServerName create.notepad" >> "/etc/apache2/sites-available/create.notepad.conf"
+	 echo "    ServerAlias create.notepad" >> "/etc/apache2/sites-available/create.notepad.conf"
+         echo "    DocumentRoot /opt/Notepad-Browser/Notepad-Browser/text/" >> "/etc/apache2/sites-available/create.notepad.conf"
+	 echo "    ErrorLog ${APACHE_LOG_DIR}/error.log" >> "/etc/apache2/sites-available/create.notepad.conf"
+	 echo "    CustomLog ${APACHE_LOG_DIR}/access.log combined" >> "/etc/apache2/sites-available/create.notepad.conf"
+	 echo "</VirtualHost>" >> "/etc/apache2/sites-available/create.notepad.conf"
+fi
+
+
+if grep -r '<VirtualHost *:80>' /etc/apache2/sites-available/link.notepad.conf
+  then echo "[ok]"
+  else
+	 echo "escrevendo no arquivo"
+	 echo "<VirtualHost *:80>" >> "/etc/apache2/sites-available/link.notepad.conf"
+	 echo "    ServerAdmin admin@example.com" >> "/etc/apache2/sites-available/link.notepad.conf"
+	 echo "    ServerName link.notepad" >> "/etc/apache2/sites-available/link.notepad.conf"
+	 echo "    ServerAlias link.notepad" >> "/etc/apache2/sites-available/link.notepad.conf"
+         echo "    DocumentRoot /opt/Notepad-Browser/Notepad-Browser/text/" >> "/etc/apache2/sites-available/link.notepad.conf"
+	 echo "    ErrorLog ${APACHE_LOG_DIR}/error.log" >> "/etc/apache2/sites-available/link.notepad.conf"
+	 echo "    CustomLog ${APACHE_LOG_DIR}/access.log combined" >> "/etc/apache2/sites-available/link.notepad.conf"
+	 echo "</VirtualHost>" >> "/etc/apache2/sites-available/link.notepad.conf"
+fi
 
 
 if grep -r 'Notepad-Browser' /etc/apache2/apache2.conf
@@ -80,7 +123,7 @@ ln -s /opt/Notepad-Browser/Notepad-Browser/all/  /home/$varname/Files
 
 echo "Fim da instalação - se tudo ocorreu bem"
 echo ""
-echo "http://file.notepad"
+echo "http://file.notepad/__doc__/nota.html"
 echo ""
 echo "Obrigada por instalar Notepad-Browser"
 echo ""
