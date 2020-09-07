@@ -39,7 +39,7 @@ if grep -r '<VirtualHost *:80>' /etc/apache2/sites-available/file.notepad.conf
 	 echo "    ServerAdmin admin@example.com" >> "/etc/apache2/sites-available/file.notepad.conf"
 	 echo "    ServerName file.notepad" >> "/etc/apache2/sites-available/file.notepad.conf"
 	 echo "    ServerAlias file.notepad" >> "/etc/apache2/sites-available/file.notepad.conf"
-         echo "    DocumentRoot /opt/Notepad-Browser/Notepad-Browser/text/" >> "/etc/apache2/sites-available/file.notepad.conf"
+         echo "    DocumentRoot /opt/Notepad-Browser/Notepad-Browser/file/" >> "/etc/apache2/sites-available/file.notepad.conf"
 	 echo "    ErrorLog ${APACHE_LOG_DIR}/error.log" >> "/etc/apache2/sites-available/file.notepad.conf"
 	 echo "    CustomLog ${APACHE_LOG_DIR}/access.log combined" >> "/etc/apache2/sites-available/file.notepad.conf"
 	 echo "</VirtualHost>" >> "/etc/apache2/sites-available/file.notepad.conf"
@@ -69,7 +69,7 @@ if grep -r '<VirtualHost *:80>' /etc/apache2/sites-available/link.notepad.conf
 	 echo "    ServerAdmin admin@example.com" >> "/etc/apache2/sites-available/link.notepad.conf"
 	 echo "    ServerName link.notepad" >> "/etc/apache2/sites-available/link.notepad.conf"
 	 echo "    ServerAlias link.notepad" >> "/etc/apache2/sites-available/link.notepad.conf"
-         echo "    DocumentRoot /opt/Notepad-Browser/Notepad-Browser/text/" >> "/etc/apache2/sites-available/link.notepad.conf"
+         echo "    DocumentRoot /opt/Notepad-Browser/Notepad-Browser/link/" >> "/etc/apache2/sites-available/link.notepad.conf"
 	 echo "    ErrorLog ${APACHE_LOG_DIR}/error.log" >> "/etc/apache2/sites-available/link.notepad.conf"
 	 echo "    CustomLog ${APACHE_LOG_DIR}/access.log combined" >> "/etc/apache2/sites-available/link.notepad.conf"
 	 echo "</VirtualHost>" >> "/etc/apache2/sites-available/link.notepad.conf"
@@ -116,7 +116,7 @@ sudo service apache2 restart
 echo "Link simbólico"
 echo ""
 
-echo "Nome de usuário:"
+echo "Nome de usuário da sua conta:"
 read varname
 
 ln -s /opt/Notepad-Browser/Notepad-Browser/all/  /home/$varname/Files
